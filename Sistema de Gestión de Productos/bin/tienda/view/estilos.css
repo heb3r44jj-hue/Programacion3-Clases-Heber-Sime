@@ -1,0 +1,64 @@
+.root {
+    -fx-font-family: "Segoe UI", Arial;
+    -fx-background-color: #f4f7f6;
+    -fx-font-size: 14px;
+}
+
+.cabecera {
+    -fx-padding: 18 26;
+    -fx-background-color: #134e4a;
+}
+
+.marca {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+}
+
+.titulo {
+    -fx-text-fill: #134e4a;
+    -fx-font-size: 25px;
+    -fx-font-weight: bold;
+}
+
+.ayuda {
+    -fx-text-fill: #5f6f6d;
+}
+
+.mensaje {
+    -fx-text-fill: #0f766e;
+    -fx-font-weight: bold;
+}
+
+.contador {
+    -fx-text-fill: #134e4a;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.total {
+    -fx-text-fill: #134e4a;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.button {
+    -fx-cursor: hand;
+    -fx-background-radius: 6;
+    -fx-padding: 9 15;
+}
+
+.principal {
+    -fx-background-color: #0f766e;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.principal:hover {
+    -fx-background-color: #10625c;
+}
+
+.text-field,
+.combo-box {
+    -fx-background-radius: 6;
+}

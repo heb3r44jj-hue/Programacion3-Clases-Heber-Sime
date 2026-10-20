@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="tienda.controller.CategoriasController" spacing="12"
+    prefWidth="460" prefHeight="460">
+    <padding>
+        <Insets top="24" right="24" bottom="24" left="24" />
+    </padding>
+    <Label text="Administrar categorias" styleClass="titulo" />
+    <Label text="Las nuevas categorias aparecen en la ventana principal."
+        styleClass="ayuda" wrapText="true" />
+    <TextField fx:id="nombre" promptText="Nombre de la categoria (ej. Lácteos)" />
+    <Button text="Agregar categoria" onAction="#agregar" styleClass="principal" />
+    <ListView fx:id="lista" VBox.vgrow="ALWAYS" />
+    <Label fx:id="estado" text="" styleClass="mensaje" wrapText="true" />
+    <HBox spacing="10">
+        <Button text="Eliminar seleccionada" onAction="#eliminar" />
+        <Button text="Cerrar" onAction="#cerrar" />
+    </HBox>
+</VBox>

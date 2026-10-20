@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="tienda.controller.PrincipalController">
+   <top>
+      <HBox alignment="CENTER_LEFT" spacing="12" styleClass="cabecera">
+         <Label text="TIENDA" styleClass="marca" />
+         <Region HBox.hgrow="ALWAYS" />
+         <Button text="Administrar categorias" onAction="#abrirCategorias" />
+         <Button text="Consultar productos" onAction="#abrirConsulta" />
+      </HBox>
+   </top>
+   <center>
+      <VBox alignment="TOP_CENTER" spacing="14">
+         <padding>
+            <Insets top="30" right="30" bottom="30" left="30" />
+         </padding>
+         <Label text="Registro de productos" styleClass="titulo" />
+         <Label text="Registra un producto y administra las categorias desde otra ventana"
+            styleClass="ayuda" />
+         <GridPane hgap="14" vgap="12" maxWidth="600">
+            <columnConstraints>
+               <ColumnConstraints minWidth="150" />
+               <ColumnConstraints hgrow="ALWAYS" />
+            </columnConstraints>
+            <Label text="Nombre del producto" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+            <TextField fx:id="nombre" promptText="Ej. Arroz" GridPane.rowIndex="0"
+               GridPane.columnIndex="1" />
+            <Label text="Categoria" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+            <ComboBox fx:id="categoria" promptText="Selecciona una categoria" maxWidth="Infinity"
+               GridPane.rowIndex="1" GridPane.columnIndex="1" />
+            <Label text="Precio (RD$)" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+            <TextField fx:id="precio" promptText="Ej. 65.00" GridPane.rowIndex="2"
+               GridPane.columnIndex="1" />
+            <Label text="Cantidad disponible" GridPane.rowIndex="3" GridPane.columnIndex="0" />
+            <TextField fx:id="cantidad" promptText="Ej. 20" GridPane.rowIndex="3"
+               GridPane.columnIndex="1" />
+         </GridPane>
+         <Button text="Guardar producto" onAction="#guardar" styleClass="principal" />
+         <Label fx:id="estado" text="" styleClass="mensaje" />
+         <Label fx:id="contador" text="" styleClass="contador" />
+      </VBox>
+   </center>
+</BorderPane>

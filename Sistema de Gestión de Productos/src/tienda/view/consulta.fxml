@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="tienda.controller.ConsultaController" spacing="12"
+  prefWidth="700" prefHeight="520">
+  <padding>
+    <Insets top="24" right="24" bottom="24" left="24" />
+  </padding>
+  <Label text="Consultar productos" styleClass="titulo" />
+  <HBox alignment="CENTER_LEFT" spacing="10">
+    <Label text="Filtrar por categoria:" />
+    <ComboBox fx:id="filtroCategoria" promptText="Todas" prefWidth="200" />
+    <Button text="Mostrar todos" onAction="#limpiarFiltro" />
+  </HBox>
+  <TableView fx:id="tabla" VBox.vgrow="ALWAYS">
+    <columns>
+      <TableColumn fx:id="productoCol" text="Producto" prefWidth="200" />
+      <TableColumn fx:id="categoriaCol" text="Categoria" prefWidth="170" />
+      <TableColumn fx:id="precioCol" text="Precio" prefWidth="140" />
+      <TableColumn fx:id="cantidadCol" text="Cantidad" prefWidth="120" />
+    </columns>
+  </TableView>
+  <Label fx:id="total" text="" styleClass="total" />
+  <Label fx:id="estado" text="" styleClass="mensaje" />
+  <HBox spacing="10">
+    <Button text="Eliminar producto" onAction="#eliminar" />
+    <Button text="Cerrar" onAction="#cerrar" />
+  </HBox>
+</VBox>
